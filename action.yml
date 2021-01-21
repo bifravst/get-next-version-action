@@ -13,6 +13,9 @@ inputs:
       "The default version to use in case no new release is determined"
     required: false
     default: "0.0.0-development"
+outputs:
+  nextRelease:
+    description: "The next release version"
 
 runs:
   using: "node12"
