@@ -23,7 +23,7 @@ released, so it can be included as a version string in a build.
   id: version
   with:
     branch: saga
-    githubRepository: ${{ env.GITHUB_REPOSITORY }}
+    githubRepository: $GITHUB_REPOSITORY
     defaultVersion: "0.0.0-development"
 ```
 
