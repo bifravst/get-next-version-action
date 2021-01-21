@@ -1,0 +1,18 @@
+name: "Get next release version"
+description: "Determines the next release version for this repository"
+inputs:
+  branch:
+    description: "The release branch to use"
+    default: "saga"
+    required: false
+  repositoryUrl:
+    description: "The repository URL, format: https://github.com/bifravst/get-next-version-action.git"
+    required: true
+  defaultVersion:
+    description: "The default version to use in case no new release is determined"
+    required: false
+    default: "0.0.0-development"
+
+runs:
+  using: "node12"
+  main: "build/index.js"
