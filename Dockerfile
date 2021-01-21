@@ -1,8 +1,8 @@
 FROM node:14-alpine3.10
-WORKDIR /workdir
-COPY get-next-version.ts /workdir
-COPY package.json /workdir
-COPY package-lock.json /workdir
-COPY tsconfig.json /workdir
+WORKDIR /get-next-version
+COPY get-next-version.ts /get-next-version
+COPY package.json /get-next-version
+COPY package-lock.json /get-next-version
+COPY tsconfig.json /get-next-version
 RUN npm ci && npx tsc
-ENTRYPOINT ["node","--unhandled-rejections=strict","/workdir/dist/get-next-version.js"]
+ENTRYPOINT ["node","--unhandled-rejections=strict","/get-next-version/dist/get-next-version.js"]

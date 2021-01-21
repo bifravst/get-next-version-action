@@ -4,7 +4,7 @@ import { WritableStreamBuffer } from 'stream-buffers'
 const stdoutBuffer = new WritableStreamBuffer()
 const stderrBuffer = new WritableStreamBuffer()
 
-const githubRepository = process.argv[process.argv.length - 3]
+const githubRepository = process.env.GITHUB_REPOSITORY
 const branch = process.argv[process.argv.length - 2]
 const defaultVersion = process.argv[process.argv.length - 1]
 
@@ -19,7 +19,6 @@ const main = async () => {
 			ci: false,
 		},
 		{
-			cwd: '/github/workspace',
 			stdout: (stdoutBuffer as unknown) as NodeJS.WriteStream,
 			stderr: (stderrBuffer as unknown) as NodeJS.WriteStream,
 		},
