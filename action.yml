@@ -18,5 +18,9 @@ outputs:
     description: "The next release version"
 
 runs:
-  using: "node12"
-  main: "build/index.js"
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.githubRepository }}
+    - ${{ inputs.branch }}
+    - ${{ inputs.defaultVersion }}
