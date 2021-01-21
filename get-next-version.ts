@@ -9,6 +9,8 @@ const branch = process.argv[process.argv.length - 2]
 const defaultVersion = process.argv[process.argv.length - 1]
 
 const main = async () => {
+	console.log(process.cwd())
+	console.log(process.env)
 	const result = await semanticRelease(
 		{
 			// Core options
