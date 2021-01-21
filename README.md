@@ -18,6 +18,7 @@ released, so it can be included as a version string in a build.
 ## Usage
 
 ```yaml
+- uses: actions/checkout@v2
 - name: Determine next release version
   uses: bifravst/get-next-version-action@saga
   id: version
