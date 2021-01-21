@@ -1,5 +1,7 @@
 name: Example
 
+on: push
+
 jobs:
   version:
     name: Determine next release version
