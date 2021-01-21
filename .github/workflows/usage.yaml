@@ -1,0 +1,19 @@
+name: Example
+
+jobs:
+  version:
+    name: Determine next release version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Determine next release version
+        uses: bifravst/get-next-version-action@saga
+        id: version
+        with:
+          branch: saga
+          githubRepository: ${{ github.repository }}
+
+      - run: |
+          NEXT_VERSION=${{ steps.version.outputs.nextRelease }}
+          echo ${NEXT_VERSION}
