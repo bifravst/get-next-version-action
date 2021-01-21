@@ -75255,7 +75255,7 @@ const stderrBuffer = new stream_buffers_1.WritableStreamBuffer();
 const main = async () => {
     const result = await semanticRelease({
         branch: getRequiredInput('branch'),
-        repositoryUrl: getRequiredInput('repositoryUrl'),
+        repositoryUrl: `https://github.com/${getRequiredInput('githubRepository')}.git`,
         plugins: ['@semantic-release/commit-analyzer'],
         dryRun: true,
         ci: false,
