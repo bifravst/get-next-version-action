@@ -29,3 +29,5 @@ released, so it can be included as a version string in a build.
 
 `${{ steps.version.outputs.nextRelease }}` then contains the next release
 version (or `0.0.0-development` if no new release would be created).
+
+[Here](./.github/workflows/usage.yaml) is a minimal example.
