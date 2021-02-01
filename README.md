@@ -1,3 +1,6 @@
+> **:truck: moved to https://github.com/NordicSemiconductor/cloud-get-next-version-action**  
+> :information_source: [more info](https://github.com/bifravst/bifravst/issues/56)
+
 # Get Next Release Action
 
 [![GitHub Actions](https://github.com/bifravst/get-next-version-action/workflows/Test%20and%20Release/badge.svg)](https://github.com/bifravst/get-next-version-action/actions)
