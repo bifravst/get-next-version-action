@@ -1,21 +1,20 @@
 {
-  "name": "@bifravst/get-next-version-action",
+  "name": "@nordicsemiconductor/get-next-version-action",
   "version": "0.0.0-development",
   "description": "Determines the next release version for this repository",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bifravst/get-next-version-action.git"
+    "url": "https://github.com/NordicSemiconductor/cloud-get-next-version-action.git"
   },
   "bugs": {
-    "url": "https://github.com/bifravst/get-next-version-action/issues"
+    "url": "https://github.com/NordicSemiconductor/cloud-get-next-version-action/issues"
   },
-  "homepage": "https://bifravst.github.io/",
+  "homepage": "https://github.com/NordicSemiconductor/cloud-get-next-version-action#readme",
   "keywords": [
     "Cloud",
     "IoT",
-    "bifravst",
-    "Asset Tracker",
-    "NordicSemiconductor"
+    "Asset Tracker Cloud Example",
+    "Nordic Semiconductor"
   ],
   "author": "Nordic Semiconductor ASA | nordicsemi.no",
   "license": "BSD-3-Clause",
@@ -25,15 +24,15 @@
     "stream-buffers": "3.0.2"
   },
   "devDependencies": {
-    "@bifravst/code-style": "8.0.134",
-    "@bifravst/eslint-config-typescript": "5.0.89",
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-angular": "11.0.0",
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "9.0.0",
+    "@nordicsemiconductor/asset-tracker-cloud-eslint-config-typescript": "6.0.0",
     "@types/node": "14.14.22",
     "@types/semantic-release": "17.2.0",
     "@types/stream-buffers": "3.0.3",
     "@vercel/ncc": "0.27.0",
-    "eslint": "7.18.0",
+    "eslint": "7.19.0",
     "husky": "4.3.8",
     "lint-staged": "10.5.3",
     "prettier": "2.2.1",
