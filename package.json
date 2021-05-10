@@ -50,7 +50,7 @@
   },
   "engines": {
     "node": ">=14.0.0",
-    "npm": "7.11.2"
+    "npm": "7.12.1"
   },
   "release": {
     "branches": [
