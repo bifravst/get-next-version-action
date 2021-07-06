@@ -33,7 +33,7 @@
     "@types/stream-buffers": "3.0.4",
     "@vercel/ncc": "0.28.6",
     "eslint": "7.30.0",
-    "husky": "7.0.0",
+    "husky": "7.0.1",
     "lint-staged": "11.0.0",
     "pinst": "2.1.6",
     "prettier": "2.3.2",
