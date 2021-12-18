@@ -28,7 +28,7 @@
     "@types/node": "16.11.14",
     "@types/semantic-release": "17.2.3",
     "@types/stream-buffers": "3.0.4",
-    "@vercel/ncc": "0.33.0"
+    "@vercel/ncc": "0.33.1"
   },
   "lint-staged": {
     "*.{md,json,yaml,yml}": [
