@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.7",
-    "@types/node": "16.11.20",
+    "@types/node": "16.11.21",
     "@types/semantic-release": "17.2.3",
     "@types/stream-buffers": "3.0.4",
     "@vercel/ncc": "0.33.1"
