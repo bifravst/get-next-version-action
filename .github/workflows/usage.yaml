@@ -7,7 +7,7 @@ jobs:
     name: Determine next release version
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Determine next release version
         uses: nordicsemiconductor/cloud-get-next-version-action@saga
