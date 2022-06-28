@@ -20,8 +20,8 @@ const main = async () => {
 		},
 		{
 			cwd: process.cwd(),
-			stdout: (stdoutBuffer as unknown) as NodeJS.WriteStream,
-			stderr: (stderrBuffer as unknown) as NodeJS.WriteStream,
+			stdout: stdoutBuffer as unknown as NodeJS.WriteStream,
+			stderr: stderrBuffer as unknown as NodeJS.WriteStream,
 		},
 	)
 
