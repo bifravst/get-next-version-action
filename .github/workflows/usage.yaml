@@ -5,7 +5,7 @@ on: push
 jobs:
   version:
     name: Determine next release version
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
 
