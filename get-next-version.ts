@@ -4,16 +4,21 @@ import * as os from 'os'
 import semanticRelease from 'semantic-release'
 import { WritableStreamBuffer } from 'stream-buffers'
 
-const { outputsFile } = fromEnv({
+const { outputsFile, githubRepository } = fromEnv({
 	outputsFile: 'GITHUB_OUTPUT',
+	githubRepository: 'GITHUB_REPOSITORY',
 })(process.env)
 
 const stdoutBuffer = new WritableStreamBuffer()
 const stderrBuffer = new WritableStreamBuffer()
 
-const githubRepository = process.env.GITHUB_REPOSITORY
 const branch = process.argv[process.argv.length - 2]
 const defaultVersion = process.argv[process.argv.length - 1]
+
+console.debug('cwd', process.cwd())
+console.debug('branch', branch)
+console.debug('repository', githubRepository)
+console.debug('outputsFile', outputsFile)
 
 const main = async () => {
 	const result = await semanticRelease(
