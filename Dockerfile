@@ -1,4 +1,4 @@
-FROM node:15-alpine3.10
+FROM node:18-alpine
 # Needed for semantic release
 RUN apk add --no-cache git
 WORKDIR /get-next-version
