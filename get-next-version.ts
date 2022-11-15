@@ -1,7 +1,7 @@
 import { fromEnv } from '@nordicsemiconductor/from-env'
 import { appendFileSync } from 'fs'
 import * as os from 'os'
-import * as semanticRelease from 'semantic-release'
+import semanticRelease from 'semantic-release'
 import { WritableStreamBuffer } from 'stream-buffers'
 
 const { outputsFile } = fromEnv({
