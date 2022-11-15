@@ -1,5 +1,7 @@
 import * as semanticRelease from 'semantic-release'
 import { WritableStreamBuffer } from 'stream-buffers'
+import { writeFileSync, readFileSync } from 'fs'
+import os from 'os'
 
 const stdoutBuffer = new WritableStreamBuffer()
 const stderrBuffer = new WritableStreamBuffer()
@@ -25,16 +27,17 @@ const main = async () => {
 		},
 	)
 
+	const outputs = readFileSync(process.env.GITHUB_OUTPUT, 'utf-8')
 	if (result !== false) {
 		const { nextRelease } = result
-		console.log(`::set-output name=nextRelease::${nextRelease.version}`)
+		writeFileSync(process.env.GITHUB_OUTPUT, [outputs, `nextRelease=${nextRelease.version}`].join(os.EOL), 'utf-8')
 	} else {
 		console.error('No new release.')
 		process.stderr.write(stdoutBuffer.getContentsAsString('utf8') as string)
 		if (stderrBuffer.size() > 0) {
 			process.stderr.write(stderrBuffer.getContentsAsString('utf8') as string)
 		}
-		console.log(`::set-output name=nextRelease::${defaultVersion}`)
+		writeFileSync(process.env.GITHUB_OUTPUT, [outputs, `nextRelease=${defaultVersion}`].join(os.EOL), 'utf-8')
 	}
 }
 
