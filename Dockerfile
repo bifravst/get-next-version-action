@@ -8,4 +8,5 @@ COPY package.json /get-next-version
 COPY package-lock.json /get-next-version
 COPY tsconfig.json /get-next-version
 RUN npm ci && npx tsc
+ENV DEBUG='*'
 ENTRYPOINT ["node","--unhandled-rejections=strict","/get-next-version/dist/get-next-version.js"]
