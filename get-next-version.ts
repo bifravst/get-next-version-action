@@ -1,7 +1,12 @@
+import { fromEnv } from '@nordicsemiconductor/from-env'
+import { readFileSync, writeFileSync } from 'fs'
+import * as os from 'os'
 import * as semanticRelease from 'semantic-release'
 import { WritableStreamBuffer } from 'stream-buffers'
-import { writeFileSync, readFileSync } from 'fs'
-import os from 'os'
+
+const { outputsFile } = fromEnv({
+	outputsFile: 'GITHUB_OUTPUT',
+})(process.env)
 
 const stdoutBuffer = new WritableStreamBuffer()
 const stderrBuffer = new WritableStreamBuffer()
@@ -27,17 +32,25 @@ const main = async () => {
 		},
 	)
 
-	const outputs = readFileSync(process.env.GITHUB_OUTPUT, 'utf-8')
+	const outputs = readFileSync(outputsFile, 'utf-8')
 	if (result !== false) {
 		const { nextRelease } = result
-		writeFileSync(process.env.GITHUB_OUTPUT, [outputs, `nextRelease=${nextRelease.version}`].join(os.EOL), 'utf-8')
+		writeFileSync(
+			outputsFile,
+			[outputs, `nextRelease=${nextRelease.version}`].join(os.EOL),
+			'utf-8',
+		)
 	} else {
 		console.error('No new release.')
 		process.stderr.write(stdoutBuffer.getContentsAsString('utf8') as string)
 		if (stderrBuffer.size() > 0) {
 			process.stderr.write(stderrBuffer.getContentsAsString('utf8') as string)
 		}
-		writeFileSync(process.env.GITHUB_OUTPUT, [outputs, `nextRelease=${defaultVersion}`].join(os.EOL), 'utf-8')
+		writeFileSync(
+			outputsFile,
+			[outputs, `nextRelease=${defaultVersion}`].join(os.EOL),
+			'utf-8',
+		)
 	}
 }
 

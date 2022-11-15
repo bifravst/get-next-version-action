@@ -2,6 +2,7 @@
   "name": "@nordicsemiconductor/get-next-version-action",
   "version": "0.0.0-development",
   "description": "Determines the next release version for this repository",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/NordicSemiconductor/cloud-get-next-version-action.git"
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.140",
+    "@nordicsemiconductor/from-env": "^1.0.3",
     "@types/node": "18.11.9",
     "@types/semantic-release": "17.2.4",
     "@types/stream-buffers": "3.0.4",
@@ -58,5 +60,6 @@
   },
   "scripts": {
     "prepare": "husky install"
-  }
+  },
+  "prettier": "@nordicsemiconductor/asset-tracker-cloud-code-style/.prettierrc"
 }
