@@ -1,5 +1,5 @@
 import { fromEnv } from '@nordicsemiconductor/from-env'
-import { readFileSync, writeFileSync } from 'fs'
+import { appendFileSync } from 'fs'
 import * as os from 'os'
 import * as semanticRelease from 'semantic-release'
 import { WritableStreamBuffer } from 'stream-buffers'
@@ -32,12 +32,11 @@ const main = async () => {
 		},
 	)
 
-	const outputs = readFileSync(outputsFile, 'utf-8')
 	if (result !== false) {
 		const { nextRelease } = result
-		writeFileSync(
+		appendFileSync(
 			outputsFile,
-			[outputs, `nextRelease=${nextRelease.version}`].join(os.EOL),
+			`nextRelease=${nextRelease.version}${os.EOL}`,
 			'utf-8',
 		)
 	} else {
@@ -46,9 +45,9 @@ const main = async () => {
 		if (stderrBuffer.size() > 0) {
 			process.stderr.write(stderrBuffer.getContentsAsString('utf8') as string)
 		}
-		writeFileSync(
+		appendFileSync(
 			outputsFile,
-			[outputs, `nextRelease=${defaultVersion}`].join(os.EOL),
+			`nextRelease=${defaultVersion}${os.EOL}`,
 			'utf-8',
 		)
 	}
