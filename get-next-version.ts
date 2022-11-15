@@ -1,4 +1,5 @@
 import { fromEnv } from '@nordicsemiconductor/from-env'
+import { execSync } from 'child_process'
 import { appendFileSync } from 'fs'
 import * as os from 'os'
 import semanticRelease from 'semantic-release'
@@ -15,10 +16,14 @@ const stderrBuffer = new WritableStreamBuffer()
 const branch = process.argv[process.argv.length - 2]
 const defaultVersion = process.argv[process.argv.length - 1]
 
-console.debug('cwd', process.cwd())
+const workdir = process.cwd()
+
+console.debug('cwd', workdir)
 console.debug('branch', branch)
 console.debug('repository', githubRepository)
 console.debug('outputsFile', outputsFile)
+
+execSync(`git config --global --add safe.directory ${workdir}`)
 
 const main = async () => {
 	const result = await semanticRelease(
@@ -31,7 +36,7 @@ const main = async () => {
 			ci: false,
 		},
 		{
-			cwd: process.cwd(),
+			cwd: workdir,
 			stdout: stdoutBuffer as unknown as NodeJS.WriteStream,
 			stderr: stderrBuffer as unknown as NodeJS.WriteStream,
 		},
