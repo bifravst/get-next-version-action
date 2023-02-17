@@ -25,7 +25,7 @@
   "devDependencies": {
     "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.179",
     "@nordicsemiconductor/from-env": "^1.0.3",
-    "@types/node": "18.13.0",
+    "@types/node": "18.14.0",
     "@types/semantic-release": "20.0.1",
     "@types/stream-buffers": "3.0.4",
     "@vercel/ncc": "0.36.1"
