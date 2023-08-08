@@ -23,7 +23,7 @@
     "stream-buffers": "3.0.2"
   },
   "devDependencies": {
-    "@nordicsemiconductor/asset-tracker-cloud-code-style": "12.0.68",
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "12.0.69",
     "@nordicsemiconductor/from-env": "^2.0.0",
     "@types/node": "18.17.3",
     "@types/semantic-release": "20.0.1",
