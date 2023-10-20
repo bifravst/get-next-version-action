@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:21-alpine
 # Needed for semantic release
 RUN apk add --no-cache git
 RUN npm -g i npm@
