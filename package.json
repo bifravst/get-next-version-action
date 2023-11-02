@@ -41,7 +41,7 @@
   },
   "engines": {
     "node": ">=18",
-    "npm": "10.2.2"
+    "npm": "10.2.3"
   },
   "release": {
     "branches": [
