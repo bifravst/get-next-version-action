@@ -19,7 +19,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@semantic-release/commit-analyzer": "11.1.0",
-    "semantic-release": "22.0.7",
+    "semantic-release": "22.0.8",
     "stream-buffers": "3.0.2"
   },
   "devDependencies": {
