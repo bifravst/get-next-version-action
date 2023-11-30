@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "18.4.3",
-    "@nordicsemiconductor/asset-tracker-cloud-code-style": "13.0.0",
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "13.1.0",
     "@nordicsemiconductor/from-env": "^3.0.0",
     "@types/node": "20.10.1",
     "@types/semantic-release": "20.0.6",
