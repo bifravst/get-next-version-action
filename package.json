@@ -23,7 +23,7 @@
     "stream-buffers": "3.0.2"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "18.5.0",
+    "@commitlint/config-conventional": "18.6.0",
     "@nordicsemiconductor/asset-tracker-cloud-code-style": "13.1.11",
     "@nordicsemiconductor/from-env": "^3.0.0",
     "@types/node": "20.11.6",
