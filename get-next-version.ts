@@ -1,4 +1,4 @@
-import { fromEnv } from '@nordicsemiconductor/from-env'
+import { fromEnv } from '@bifravst/from-env'
 import { execSync } from 'child_process'
 import { appendFileSync } from 'fs'
 import * as os from 'os'
