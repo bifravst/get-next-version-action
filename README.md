@@ -1,6 +1,6 @@
 # Get Next Release Action
 
-[![GitHub Actions](https://github.com/NordicSemiconductor/cloud-get-next-version-action/workflows/Test%20and%20Release/badge.svg)](https://github.com/NordicSemiconductor/cloud-get-next-version-action/actions)
+[![GitHub Actions](https://github.com/bifravst/get-next-version-action/workflows/Test%20and%20Release/badge.svg)](https://github.com/bifravst/get-next-version-action/actions)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)
 [![@commitlint/config-conventional](https://img.shields.io/badge/%40commitlint-config--conventional-brightgreen)](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional)
@@ -18,7 +18,7 @@ released, so it can be included as a version string in a build.
 ```yaml
 - uses: actions/checkout@v2
 - name: Determine next release version
-  uses: nordicsemiconductor/cloud-get-next-version-action@saga
+  uses: nordicsemiconductor/get-next-version-action@saga
   id: version
   with:
     branch: saga
