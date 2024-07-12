@@ -19,5 +19,4 @@ jobs:
       - run: npx tsc
       - run: docker build ./
       - name: Semantic release
-        continue-on-error: true
         run: npx semantic-release
