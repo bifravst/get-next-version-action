@@ -18,7 +18,7 @@ released, so it can be included as a version string in a build.
 ```yaml
 - uses: actions/checkout@v2
 - name: Determine next release version
-  uses: nordicsemiconductor/get-next-version-action@saga
+  uses: bifravst/get-next-version-action@saga
   id: version
   with:
     branch: saga
