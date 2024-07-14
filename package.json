@@ -31,7 +31,9 @@
     "@types/semantic-release": "20.0.6",
     "@types/stream-buffers": "3.0.7",
     "@vercel/ncc": "0.38.1",
-    "husky": "9.0.11"
+    "cat": "*",
+    "husky": "9.0.11",
+    "package.json": "*"
   },
   "lint-staged": {
     "*.{md,json,yaml,yml}": [
@@ -66,5 +68,9 @@
   "scripts": {
     "prepare": "husky"
   },
-  "prettier": "@bifravst/prettier-config"
+  "prettier": "@bifravst/prettier-config",
+  "peerDependencies": {
+    "cat": "^0.2.0",
+    "package.json": "^2.0.1"
+  }
 }
