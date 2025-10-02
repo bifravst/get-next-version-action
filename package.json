@@ -27,7 +27,7 @@
     "@bifravst/from-env": "3.0.2",
     "@bifravst/prettier-config": "1.1.13",
     "@commitlint/config-conventional": "19.8.1",
-    "@types/node": "22.18.6",
+    "@types/node": "22.18.7",
     "@types/semantic-release": "21.1.0",
     "@types/stream-buffers": "3.0.7",
     "@vercel/ncc": "0.38.4",
