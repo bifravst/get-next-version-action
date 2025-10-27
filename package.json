@@ -29,7 +29,7 @@
     "@commitlint/config-conventional": "19.8.1",
     "@types/node": "22.18.12",
     "@types/semantic-release": "21.1.0",
-    "@types/stream-buffers": "3.0.7",
+    "@types/stream-buffers": "3.0.8",
     "@vercel/ncc": "0.38.4",
     "husky": "9.1.7"
   },
